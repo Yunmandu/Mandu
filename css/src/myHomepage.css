@@ -1,16 +1,185 @@
 /* myHomepage.css */
 #wrap {
-  width: 500%;
+  width: 100%;
   height: 100%;
+  position: relative;
+  overflow: hidden; }
+
+#wrap::before {
+  content: "";
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
   background-repeat: no-repeat;
   background-position: 0 40%;
   background-size: contain;
   background-image: url("../../img/bg_line.gif"); }
 
+#wrap_2 {
+  width: 500%;
+  height: 100%; }
+
+#headBox {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 150; }
+  #headBox > h1 {
+    position: absolute;
+    bottom: 50px;
+    left: 70px;
+    z-index: 150;
+    width: 120px;
+    height: 120px; }
+    #headBox > h1 > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+      background-image: url("../../img/logo_1.png"); }
+    #headBox > h1 > a:hover, #headBox > h1 a:focus {
+      background-image: url("../../img/logo_2.png"); }
+  #headBox > .indicator {
+    position: absolute;
+    z-index: 150;
+    top: 60px;
+    right: 40px;
+    width: 770px;
+    height: 65px;
+    float: right;
+    box-sizing: border-box; }
+    #headBox > .indicator > .indi {
+      width: 180px;
+      height: 65px;
+      float: left;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain; }
+    #headBox > .indicator > .indi:nth-child(1) {
+      margin-right: 30px;
+      margin-top: -5px; }
+    #headBox > .indicator > .indi:nth-child(2) {
+      margin-right: 8px; }
+    #headBox > .indicator > .indi:nth-child(3) {
+      width: 160px;
+      margin-right: 8px; }
+    #headBox > .indicator > .indi:nth-child(4) {
+      width: 160px; }
+    #headBox > .indicator > .indi > a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+    #headBox > .indicator > .indi_01 > a {
+      background-image: url("../../img/aboutme.png"); }
+    #headBox > .indicator .indi_01 > a:before {
+      display: block;
+      content: " ";
+      position: absolute;
+      top: -5px;
+      left: -15px;
+      z-index: -1;
+      width: 0px;
+      height: 70px;
+      background-image: url("../../img/aboutme_bg.png");
+      opacity: 0;
+      transition: all 550ms ease; }
+    #headBox > .indicator .indi_01 > a:hover:before,
+    #headBox > .indicator .indi_01 > a:focus:before {
+      width: 210px;
+      opacity: 1; }
+    #headBox > .indicator > .indi_02 > a {
+      background-image: url("../../img/portfolio.png"); }
+    #headBox > .indicator .indi_02 > a:before {
+      display: block;
+      content: " ";
+      position: absolute;
+      top: -5px;
+      left: 190px;
+      z-index: -1;
+      width: 0px;
+      height: 70px;
+      background-image: url("../../img/portfolio_bg.png");
+      opacity: 0;
+      transition: all 550ms ease; }
+    #headBox > .indicator .indi_02 > a:hover:before,
+    #headBox > .indicator .indi_02 > a:focus:before {
+      width: 210px;
+      opacity: 1; }
+    #headBox > .indicator > .indi_03 > a {
+      background-image: url("../../img/gallery.png"); }
+    #headBox > .indicator .indi_03 > a:before {
+      display: block;
+      content: " ";
+      position: absolute;
+      top: -5px;
+      left: 395px;
+      z-index: -1;
+      width: 0px;
+      height: 70px;
+      background-image: url("../../img/gallery_bg.png");
+      opacity: 0;
+      transition: all 550ms ease; }
+    #headBox > .indicator .indi_03 > a:hover:before,
+    #headBox > .indicator .indi_03 > a:focus:before {
+      width: 180px;
+      opacity: 1; }
+    #headBox > .indicator > .indi_04 > a {
+      background-image: url("../../img/contact.png"); }
+    #headBox > .indicator .indi_04 > a:before {
+      display: block;
+      content: " ";
+      position: absolute;
+      top: -5px;
+      left: 565px;
+      z-index: -1;
+      width: 0px;
+      height: 70px;
+      background-image: url("../../img/contact_bg.png");
+      opacity: 0;
+      transition: all 550ms ease; }
+    #headBox > .indicator .indi_04 > a:hover:before,
+    #headBox > .indicator .indi_04 > a:focus:before {
+      width: 180px;
+      opacity: 1; }
+
 #mainBox {
+  position: relative;
+  z-index: 100;
   float: left;
   width: 20%;
   height: 100%; }
+
+.title {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 620px;
+  height: 150px;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  background-image: url("../../img/main_title.png"); }
+
+.mandu {
+  position: absolute;
+  bottom: 50px;
+  right: 60px;
+  width: 350px;
+  height: 180px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  background-image: url("../../img/mandu.gif"); }
 
 #consBox {
   float: left;
@@ -27,7 +196,7 @@
   width: 20%;
   height: 100%; }
 
-#contect {
+#contact {
   float: left;
   width: 20%;
   height: 100%; }
